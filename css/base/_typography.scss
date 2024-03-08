@@ -1,0 +1,28 @@
+.title-first {
+   color: $color-white;
+   text-transform: uppercase;
+   margin: 0 0 6.5rem 0;
+   &__main {
+      display: block;
+      font-weight: 800;
+      font-size: 5rem;
+      letter-spacing: 1rem;
+      margin: 0 0 1rem 0;
+      animation-name: leftToRight;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-timing-function: ease;
+      backface-visibility: hidden; //-фиксит анимацию
+   }
+   &__secondary {
+      display: block;
+      font-size: 4rem;
+      font-weight: 200;
+      letter-spacing: 0.5rem;
+      animation-name: RightToleft;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-timing-function: ease;
+      backface-visibility: hidden; //-фиксит анимацию
+   }
+}

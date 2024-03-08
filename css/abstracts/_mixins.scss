@@ -1,0 +1,9 @@
+
+@mixin style-link($color,$font-size) {
+   display: inline-block;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: $color;
+   font-size: $font-size ;
+
+}

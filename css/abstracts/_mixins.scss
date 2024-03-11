@@ -5,5 +5,11 @@
    text-decoration: none;
    color: $color;
    font-size: $font-size ;
-
+}
+@mixin clearfix{
+   &::after{
+      content: "";
+      display: table;
+      clear: both;
+   }
 }

@@ -1,0 +1,21 @@
+.info-card {
+   padding: 2.5rem;
+   background-color: rgba($color-white, 0.8);
+   border-radius: 0.5rem;
+   box-shadow: $box-shadow;
+   text-align: center;
+   transition: .5s all;
+
+   &:hover{
+      transform: translateY(-1rem) scale(1.1);
+      transition: .5s all;
+   }
+   &__icon {
+      display: inline-block;
+      font-size: 6rem;
+      background: linear-gradient(90deg, rgba($color-brown-light, 0.7), rgba($color-brown-darck, 0.7)), 99.94%;
+      -webkit-background-clip: text;
+      color: transparent;
+
+   }
+}

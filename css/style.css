@@ -237,6 +237,57 @@ body {
   transform: scale(0.95);
 }
 
+.info-card {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition: 0.5s all;
+}
+.info-card:hover {
+  transform: translateY(-1rem) scale(1.1);
+  transition: 0.5s all;
+}
+.info-card__icon {
+  display: inline-block;
+  font-size: 6rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7)), 99.94%;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.card-turs {
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+.card-turs__side {
+  height: 50rem;
+  transition: 0.7s all ease-out;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.card-turs__side_front {
+  background: red;
+}
+.card-turs__side_back {
+  background: rgb(88, 176, 66);
+  transform: rotateY(180deg);
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.8), rgba(161, 79, 3, 0.8));
+}
+.card-turs:hover .card-turs__side_front {
+  transform: rotateY(180deg);
+}
+.card-turs:hover .card-turs__side_back {
+  transform: rotateY(0deg);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -305,5 +356,18 @@ body {
 }
 
 .section-about {
-  padding-top: 8rem;
+  padding: 8rem 0;
+}
+
+.section-info {
+  padding: 21rem 0;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.8), rgba(0, 0, 0, 0.8)), url(../../img/section-info-bg.jpeg) center/cover no-repeat;
+  transform: skewY(7deg);
+}
+.section-info > * {
+  transform: skewY(-7deg);
+}
+
+.section-tour {
+  padding-top: 21rem;
 }/*# sourceMappingURL=style.css.map */

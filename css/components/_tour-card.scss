@@ -3,29 +3,119 @@
    perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
+  
    &__side {
-      height: 50rem;
-      transition: .7s all ease-out;
+      height: 52rem;
+      transition: 0.7s all ease-out;
       color: $color-white;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       backface-visibility: hidden;
+      box-shadow: $box-shadow;
+      border-radius: 0.3rem;
+      overflow: hidden;
+
       &_front {
-         background: red;
+         background: $color-white;
       }
       &_back {
-         background: rgb(88, 176, 66);
+         // background: rgb(88, 176, 66);
          transform: rotateY(180deg);
-         background:
-            linear-gradient(120deg, rgba($color-brown-light, 0.8), rgba($color-brown-darck, 0.8));
+         background: linear-gradient(120deg, rgba($color-brown-light, 0.8), rgba($color-brown-darck, 0.8));
       }
    }
    &:hover &__side_front {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
    }
    &:hover &__side_back {
       transform: rotateY(0deg);
+   }
+
+   &__img {
+      height: 20rem;
+      background-image: url(../../img/section-tour-img-1.jpeg);
+      background-position: 0 -17rem;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-blend-mode: hard-light;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+      &_img-bg1{
+         background-image: url(../../img/section-tour-img-1.jpeg);
+      }
+      &_img-bg2{
+         background-image: url(../../img/section-tour-img-2.jpeg);
+      }
+      &_img-bg3{
+         background-image: url(../../img/section-tour-img-3.jpeg);
+      }
+   }
+   &__title {
+      font-size: 2.8rem;
+      letter-spacing: 0.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      position: absolute;
+      top: 17rem;
+      right: 0rem;
+
+   }
+   &__span{
+      background: linear-gradient(90deg, $color-brown-light, $color-brown-darck);
+      padding: 1rem 6rem .3rem 2rem;
+      &_1{
+
+      }
+      &_2{
+         position: absolute;
+         top: 3.4rem;
+         right: 0rem;
+         padding: 1rem 2rem 2rem 2rem;
+      }
+
+
+   }
+   &__description {
+      ul{
+         list-style: none;
+         margin: 0 auto;
+         width: 80%;
+
+         li{
+            font-size: $font-size-paragraph;
+            letter-spacing: .2rem;
+            color: $color-gray;
+            border-bottom: .1rem solid $color-gray;
+            text-align: center;
+            &:not(:last-child){
+               margin-bottom: 2rem;
+            }
+         }
+      }
+   }
+   &__backSide-box{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+   }
+   &__text{
+      margin-bottom: 8rem;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      color: $color-white;
+      &__title{
+         font-size: $font-size-paragraph;
+         font-weight: 300;
+      }
+      &_prise{
+         font-size: 6rem;
+         font-weight: 500;
+      }
    }
 }

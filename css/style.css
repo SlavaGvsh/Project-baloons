@@ -59,6 +59,8 @@ body {
 .container {
   background-color: #f7f7f7;
   overflow: hidden;
+  position: absolute;
+  z-index: -3;
 }
 
 .title-first {
@@ -105,6 +107,9 @@ body {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
   text-shadow: 0rem 0.4rem 4rem rgba(0, 0, 0, 0.25);
   backface-visibility: hidden;
+}
+.title-secondary_white {
+  color: #fff;
 }
 
 .title-third {
@@ -264,7 +269,7 @@ body {
   position: relative;
 }
 .card-turs__side {
-  height: 50rem;
+  height: 52rem;
   transition: 0.7s all ease-out;
   color: #fff;
   position: absolute;
@@ -272,20 +277,168 @@ body {
   left: 0;
   width: 100%;
   backface-visibility: hidden;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.3rem;
+  overflow: hidden;
 }
 .card-turs__side_front {
-  background: red;
+  background: #fff;
 }
 .card-turs__side_back {
-  background: rgb(88, 176, 66);
   transform: rotateY(180deg);
   background: linear-gradient(120deg, rgba(186, 133, 84, 0.8), rgba(161, 79, 3, 0.8));
 }
 .card-turs:hover .card-turs__side_front {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .card-turs:hover .card-turs__side_back {
   transform: rotateY(0deg);
+}
+.card-turs__img {
+  height: 20rem;
+  background-image: url(../../img/section-tour-img-1.jpeg);
+  background-position: 0 -17rem;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-blend-mode: hard-light;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+.card-turs__img_img-bg1 {
+  background-image: url(../../img/section-tour-img-1.jpeg);
+}
+.card-turs__img_img-bg2 {
+  background-image: url(../../img/section-tour-img-2.jpeg);
+}
+.card-turs__img_img-bg3 {
+  background-image: url(../../img/section-tour-img-3.jpeg);
+}
+.card-turs__title {
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  top: 17rem;
+  right: 0rem;
+}
+.card-turs__span {
+  background: linear-gradient(90deg, #ba8554, #a14f03);
+  padding: 1rem 6rem 0.3rem 2rem;
+}
+.card-turs__span_2 {
+  position: absolute;
+  top: 3.4rem;
+  right: 0rem;
+  padding: 1rem 2rem 2rem 2rem;
+}
+.card-turs__description ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 80%;
+}
+.card-turs__description ul li {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  color: #777;
+  border-bottom: 0.1rem solid #777;
+  text-align: center;
+}
+.card-turs__description ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.card-turs__backSide-box {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-turs__text {
+  margin-bottom: 8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.card-turs__text__title {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.card-turs__text_prise {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.feedBack-card {
+  width: 80%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  padding: 5rem;
+  transform: skewX(330deg);
+}
+.feedBack-card > * {
+  transform: skewX(-330deg);
+}
+.feedBack-card__img {
+  width: 15rem;
+  height: 15rem;
+  background: #777;
+  float: left;
+  border-radius: 50%;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+.feedBack-card__img img {
+  height: 100%;
+  transform: scale(1.2);
+  transition: 0.5s all;
+}
+.feedBack-card__name {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity: 0;
+  transition: 0.5s all;
+}
+.feedBack-card:hover .feedBack-card__name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.feedBack-card:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(70%);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7));
 }
 
 .row {
@@ -370,4 +523,10 @@ body {
 
 .section-tour {
   padding-top: 21rem;
+  margin-bottom: 8rem;
+}
+
+.section-feedBack {
+  padding: 8rem 0;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

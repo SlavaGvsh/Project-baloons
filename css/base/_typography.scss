@@ -45,6 +45,9 @@
       text-shadow: $shadaw-h2;
       backface-visibility: hidden; //-фиксит анимацию
    }
+   &_white{
+      color: $color-white;
+   }
 }
 .title-third{
    font-size: $font-size-h3;

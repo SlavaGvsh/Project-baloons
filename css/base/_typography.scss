@@ -26,39 +26,36 @@
       backface-visibility: hidden; //-фиксит анимацию
    }
 }
-.title-secondary{
+.title-secondary {
    // text-align: center;
    display: inline-block;
    font-size: $font-size-h2;
    letter-spacing: 1rem;
    text-transform: uppercase;
    font-weight: 800;
-   background:
-   linear-gradient(90deg, rgba($color-brown-light, 0.7), rgba($color-brown-darck, 0.7)),
-   99.94%;
+   background: linear-gradient(90deg, rgba($color-brown-light, 0.7), rgba($color-brown-darck, 0.7)), 99.94%;
    -webkit-background-clip: text;
    color: transparent;
-   transition: all .4s ;
+   transition: all 0.4s;
 
-   &:hover{
+   &:hover {
       transform: skewY(2deg) skewX(15deg) scale(1.1);
       text-shadow: $shadaw-h2;
       backface-visibility: hidden; //-фиксит анимацию
    }
-   &_white{
+   &_white {
       color: $color-white;
    }
 }
-.title-third{
+.title-third {
    font-size: $font-size-h3;
-   letter-spacing: .2rem;
+   letter-spacing: 0.2rem;
    text-transform: uppercase;
    font-weight: 700;
 }
-.paragraph{
+.paragraph {
    font-size: $font-size-paragraph;
-   letter-spacing: .2rem;
+   letter-spacing: 0.2rem;
    line-height: 140%;
    font-weight: 400;
-
 }

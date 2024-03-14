@@ -13,10 +13,24 @@
   </head>
   <body>
     <div class="container">
+      <div class="navigation">
+         <input type="checkbox" class="navigation__toggle" id="navi-toggle">
+         <label for="navi-toggle" class="navigation__button"></label>
+         <div class="navigation__background"></div>
+         <nav class="navigation__nav">
+            <ul class="navigation__list">
+               <li class="navigation__items"><a href="#" class="navigation__link">ABOUT US</a></li>
+               <li class="navigation__items"><a href="#" class="navigation__link">DISCOUNTS</a></li>
+               <li class="navigation__items"><a href="#" class="navigation__link">BEST TOURS</a></li>
+               <li class="navigation__items"><a href="#" class="navigation__link">PRICE CALCULATOR</a></li>
+               <li class="navigation__items"><a href="#" class="navigation__link">CONNECT WITH US</a></li>
+            </ul>
+         </nav>
+      </div>
       <header class="header">
         <img
           src="img/icons/logo.svg"
-          alt="Логотип воздушный фар"
+          alt="Air headlight logo"
           class="header__logo"
         />
         <div class="header__box">
@@ -121,7 +135,7 @@
           </div>
         </section>
         <section class="section-tour">
-          <div class="text-align-center">
+          <div class="text-align-center mb-80">
             <h2 class="title-secondary">MOST POPULAR TOURS</h2>
           </div>
           <div class="row">
@@ -226,11 +240,12 @@
           </div>
         </section>
         <section class="section-feedBack">
-         <div class="bg-gradient"></div>
           <video class="bg-video" autoplay muted loop>
             <source src="img/video/bg-balloons.mp4" />
             <source src="img/video/bg-balloons.webm" />
           </video>
+          <div class="bg-gradient"></div>
+
           <div class="text-align-center mb-80">
             <h2 class="title-secondary title-secondary_white">
               REVIEWS FROM OUR CLIENTS
@@ -282,7 +297,84 @@
             <a href="#" class="btn btn_animated">BOOK NOW</a>
           </div>
         </section>
+        <section class="section-book">
+          <div class="row">
+            <div class="book">
+              <div class="book__form">
+                <form action="" class="form">
+                  <div class="text-align-center mb-30">
+                    <h2 class="title-secondary">BOOK A TOUR</h2>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="text"
+                      class="form__input"
+                      placeholder="Name Surname"
+                      id="name"
+                      required
+                    />
+                    <label for="name" class="form__label"
+                      >Your first and last name</label
+                    >
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="email"
+                      class="form__input"
+                      placeholder="Your email"
+                      id="email"
+                      required
+                    />
+                    <label for="email" class="form__label">Your email</label>
+                  </div>
+                  <div class="form__group">
+                    <div class="form__group-radio">
+                      <input
+                        type="radio"
+                        class="form__input-radio"
+                        id="tour-1"
+                        name="cheked"
+                      />
+                      <label for="tour-1" class="form__label-radio"
+                        ><span class="form__button-radio"></span>Group tour</label
+                      >
+                    </div>
+                    <div class="form__group-radio">
+                      <input
+                        type="radio"
+                        class="form__input-radio"
+                        id="tour-2"
+                        name="cheked"
+                      />
+                      <label for="tour-2" class="form__label-radio"> <span class="form__button-radio"></span>Individual tour</label
+                      >
+                    </div>
+                  </div>
+                  <div class="form__group">
+                     <button class="btn btn__brown">Book now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+         <div class="row text-align-center">
+            <a href="">
+               <img src="img/icons/logo.svg" alt="Logo" class="footer__logo">
+            </a>
+         </div>
+         <div class="row">
+            <ul class="footer__list">
+               <li class="footer__item"><a href="#" class="footer__link">ABOUT US</a></li>
+               <li class="footer__item"><a href="#" class="footer__link">DISCOUNTS</a></li>
+               <li class="footer__item"><a href="#" class="footer__link">BEST TOURS</a></li>
+               <li class="footer__item"><a href="#" class="footer__link">PRICE CALCULATOR</a></li>
+               <li class="footer__item"><a href="#" class="footer__link">CONNECT WITH US</a></li>
+            </ul>
+         </div>
+      </footer>
     </div>
 
     <!-- <section class="grid-test">

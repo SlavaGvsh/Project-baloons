@@ -1,23 +1,27 @@
-.section-about{
+.section-about {
    padding: 8rem 0;
 }
-.section-info{
+.section-info {
    padding: 21rem 0;
    background:
       linear-gradient(90deg, rgba($color-brown-light, 0.8), rgba($color-black, 0.8)),
       url(../../img/section-info-bg.jpeg) center/cover no-repeat;
    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
    transform: skewY(7deg);
-   & > *{
+   & > * {
       transform: skewY(-7deg);
    }
 }
-.section-tour{
+.section-tour {
    padding-top: 21rem;
    margin-bottom: 8rem;
 }
-.section-feedBack{
+.section-feedBack {
    padding: 8rem 0;
    position: relative;
-
+}
+.section-book {
+   padding: 10rem;
+   background:
+      linear-gradient(90deg, rgba($color-brown-light, 0.8), rgba($color-black, 0.8));
 }

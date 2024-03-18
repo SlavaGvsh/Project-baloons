@@ -2,6 +2,11 @@
    color: $color-white;
    text-transform: uppercase;
    margin: 0 0 6.5rem 0;
+   @include respond(tab-land){
+      font-size: 3rem;
+   margin: 0 0 3.5rem 0;
+
+   }
    &__main {
       display: block;
       font-weight: 800;
@@ -13,6 +18,14 @@
       animation-delay: 1s;
       animation-timing-function: ease;
       backface-visibility: hidden; //-фиксит анимацию
+      @include respond(tab-land){
+         font-size: 3.5rem;
+      }
+      @include respond(tab-port){
+         font-size: 3rem;
+         letter-spacing: .5rem;
+      }
+      
    }
    &__secondary {
       display: block;
@@ -24,6 +37,14 @@
       animation-delay: 1s;
       animation-timing-function: ease;
       backface-visibility: hidden; //-фиксит анимацию
+      @include respond(tab-land){
+         font-size: 3rem;
+      }
+      @include respond(tab-port){
+         font-size: 2.5rem;
+         letter-spacing: .5rem;
+         margin-bottom: 0;
+      }
    }
 }
 .title-secondary {
@@ -36,7 +57,14 @@
    background: linear-gradient(90deg, rgba($color-brown-light, 0.7), rgba($color-brown-darck, 0.7)), 99.94%;
    -webkit-background-clip: text;
    color: transparent;
-   transition: all 0.4s;
+   transition: all .4s;
+   @include respond(tab-land){
+      font-size: 3rem;
+   }
+   @include respond(tab-port){
+      font-size: 3rem;
+      letter-spacing: .5rem;
+   }
 
    &:hover {
       transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -52,10 +80,17 @@
    letter-spacing: 0.2rem;
    text-transform: uppercase;
    font-weight: 700;
+   font-size: 3.5rem;
+   @include respond(tab-land){
+      font-size: 1.8rem;
+   }
 }
 .paragraph {
    font-size: $font-size-paragraph;
    letter-spacing: 0.2rem;
    line-height: 140%;
    font-weight: 400;
+   @include respond(tab-land){
+      font-size: 1.5rem;
+   }
 }

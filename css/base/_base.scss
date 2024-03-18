@@ -8,6 +8,18 @@
 }
 html {
    font-size: calc(10px / 16px * 100%);
+   @include respond(tab-land){
+      font-size: (9px / 16px * 100%);
+   }
+   @include respond(tab-port){
+      font-size: (7px / 16px * 100%);
+   }
+   @include respond(phone){
+      font-size: (5px / 16px * 100%);
+   }
+   @include respond(big-screen){
+      font-size: (14px / 16px * 100%);
+   }
 }
 body {
    font-family: "Roboto", sans-serif;

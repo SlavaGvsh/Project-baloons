@@ -5,6 +5,15 @@
       linear-gradient(90deg, rgba($color-brown-light, 0.8), rgba($color-black, 0.8)),
       url(../img/header-bg.jpeg) center/cover no-repeat;
    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+   @include respond(tab-land) {
+      height: 70vh;
+   }
+   @include respond(tab-port) {
+      height: 40vh;
+   }
+   @include respond(phone) {
+      height: 30vh;
+   }
    &__logo {
       position: absolute;
       left: 5rem;
@@ -19,5 +28,8 @@
       transform: translate(-50%, -50%);
       width: 100%;
       text-align: center;
+      @include respond(tab-land) {
+         top: 50%;
+      }
    }
 }

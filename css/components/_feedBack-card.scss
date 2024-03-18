@@ -5,8 +5,20 @@
    margin: 0 auto;
    padding: 5rem;
    transform: skewX(330deg);
+   @include respond(tab-port) {
+      transform: skewX(345deg);
+      width: 100%;
+      text-align: center;
+   }
+   @include respond(phone){
+      width: 70%;
+
+   }
    & > * {
       transform: skewX(-330deg);
+      @include respond(tab-port) {
+         transform: skewX(-345deg);
+      }
    }
    &__img {
       width: 15rem;
@@ -19,6 +31,11 @@
       margin-right: 4rem;
       overflow: hidden;
       position: relative;
+      @include respond(tab-port) {
+         float: none;
+         margin: 0 auto;
+         margin-bottom: 3rem;
+      }
       img {
          height: 100%;
          transform: scale(1.2);

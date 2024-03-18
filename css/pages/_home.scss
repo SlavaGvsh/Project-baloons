@@ -1,5 +1,15 @@
 .section-about {
    padding: 8rem 0;
+   margin-bottom: 5rem;
+   @include respond(tab-land) {
+      margin-bottom: 2rem;
+   }
+   @include respond(tab-port){
+      margin-bottom: 40rem;
+   }
+   @include respond(phone){
+      margin-bottom: 30rem;
+   }
 }
 .section-info {
    padding: 21rem 0;
@@ -10,6 +20,10 @@
    transform: skewY(7deg);
    & > * {
       transform: skewY(-7deg);
+   }
+   @include respond(tab-land) {
+      padding: 15rem 0;
+
    }
 }
 .section-tour {
@@ -22,6 +36,9 @@
 }
 .section-book {
    padding: 10rem;
-   background:
-      linear-gradient(90deg, rgba($color-brown-light, 0.8), rgba($color-black, 0.8));
+   background: linear-gradient(90deg, rgba($color-brown-light, 0.8), rgba($color-black, 0.8));
+   @include respond(tab-port){
+   padding: 5rem;
+
+   }
 }

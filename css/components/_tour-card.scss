@@ -3,7 +3,10 @@
    perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
-  
+   @include respond(tab-port) {
+      height: auto;
+   }
+
    &__side {
       height: 52rem;
       transition: 0.7s all ease-out;
@@ -16,18 +19,35 @@
       box-shadow: $box-shadow;
       border-radius: 0.3rem;
       overflow: hidden;
+      @include respond(tab-port) {
+         height: auto;
+         position: relative;
+      }
 
       &_front {
          background: $color-white;
+         @include respond(tab-port) {
+            padding-bottom: 15rem;
+         }
       }
       &_back {
          // background: rgb(88, 176, 66);
          transform: rotateY(180deg);
-         background: linear-gradient(120deg, rgba($color-brown-light, 0.8), rgba($color-brown-darck, 0.8));
+         background: linear-gradient(120deg, $color-brown-light, $color-brown-darck);
+         @include respond(tab-port) {
+            transform: rotateY(0deg);
+            padding: 5rem;
+            padding-top: 12rem;
+            margin-top: -11rem;
+            clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+         }
       }
    }
    &:hover &__side_front {
       transform: rotateY(-180deg);
+      @include respond(tab-port) {
+         transform: rotateY(0deg);
+      }
    }
    &:hover &__side_back {
       transform: rotateY(0deg);
@@ -41,14 +61,17 @@
       background-size: 100% auto;
       background-blend-mode: hard-light;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-      &_img-bg1{
+      &_img-bg1 {
          background-image: url(../../img/section-tour-img-1.jpeg);
       }
-      &_img-bg2{
+      &_img-bg2 {
          background-image: url(../../img/section-tour-img-2.jpeg);
       }
-      &_img-bg3{
+      &_img-bg3 {
          background-image: url(../../img/section-tour-img-3.jpeg);
+      }
+      @include respond(tab-port) {
+         height: 30rem;
       }
    }
    &__title {
@@ -60,60 +83,67 @@
       position: absolute;
       top: 17rem;
       right: 0rem;
-
-   }
-   &__span{
-      background: linear-gradient(90deg, $color-brown-light, $color-brown-darck);
-      padding: 1rem 6rem .3rem 2rem;
-      &_1{
-
+      @include respond(tab-port) {
+         top: 25rem;
       }
-      &_2{
+   }
+   &__span {
+      background: linear-gradient(90deg, $color-brown-light, $color-brown-darck);
+      padding: 1rem 6rem 0.3rem 2rem;
+      &_1 {
+      }
+      &_2 {
          position: absolute;
          top: 3.4rem;
          right: 0rem;
          padding: 1rem 2rem 2rem 2rem;
       }
-
-
    }
    &__description {
-      ul{
+      ul {
          list-style: none;
          margin: 0 auto;
          width: 80%;
 
-         li{
+         li {
             font-size: $font-size-paragraph;
-            letter-spacing: .2rem;
+            letter-spacing: 0.2rem;
             color: $color-gray;
-            border-bottom: .1rem solid $color-gray;
+            border-bottom: 0.1rem solid $color-gray;
             text-align: center;
-            &:not(:last-child){
+            &:not(:last-child) {
                margin-bottom: 2rem;
+            }
+            @include respond(tab-port) {
+               font-size: 2rem;
             }
          }
       }
    }
-   &__backSide-box{
+   &__backSide-box {
       position: absolute;
       width: 100%;
       text-align: center;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
-
+      transform: translate(-50%, -50%);
+      @include respond(tab-port) {
+         position: relative;
+         top: 0;
+         left: 0;
+         transform: translate(0, 0);
+      }
    }
-   &__text{
+   &__text {
       margin-bottom: 8rem;
-      letter-spacing: .2rem;
+      letter-spacing: 0.2rem;
       text-transform: uppercase;
       color: $color-white;
-      &__title{
+      &__title {
          font-size: $font-size-paragraph;
          font-weight: 300;
       }
-      &_prise{
+      &_prise {
          font-size: 6rem;
          font-weight: 500;
       }

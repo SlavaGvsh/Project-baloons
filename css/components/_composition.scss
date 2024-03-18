@@ -24,6 +24,10 @@
          transform: scale(1.1);
          z-index: 20;
          outline: 1rem solid $color-brown-light;
+         @include respond(phone){
+            transform: scale(.8);
+
+         }
       }
    }
    &:hover &__photo:not(:hover){

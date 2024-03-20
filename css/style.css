@@ -415,7 +415,6 @@ body {
 }
 .card-turs__img {
   height: 20rem;
-  background-image: url(../../img/section-tour-img-1.jpeg);
   background-position: 0 -17rem;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -424,13 +423,13 @@ body {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 .card-turs__img_img-bg1 {
-  background-image: url(../../img/section-tour-img-1.jpeg);
+  background-image: url(../img/section-tour-img-1.jpeg);
 }
 .card-turs__img_img-bg2 {
-  background-image: url(../../img/section-tour-img-2.jpeg);
+  background-image: url(../img/section-tour-img-2.jpeg);
 }
 .card-turs__img_img-bg3 {
-  background-image: url(../../img/section-tour-img-3.jpeg);
+  background-image: url(../img/section-tour-img-3.jpeg);
 }
 @media (max-width: 900px) {
   .card-turs__img {
@@ -771,6 +770,11 @@ body {
     width: calc((100% - 3 * 2rem) / 4);
   }
 }
+@media (min-width: 1800px) {
+  .col-1-of-4 {
+    width: calc((100% - 3 * 2rem) / 4);
+  }
+}
 
 .col-2-of-4 {
   width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
@@ -796,6 +800,11 @@ body {
     width: 100%;
     margin-right: 0 !important;
     margin-bottom: 4rem;
+  }
+}
+@media (min-width: 1800px) {
+  [class^=col-]:not(:last-child) {
+    margin-right: 2rem;
   }
 }
 

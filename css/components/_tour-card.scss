@@ -55,20 +55,20 @@
 
    &__img {
       height: 20rem;
-      background-image: url(../../img/section-tour-img-1.jpeg);
+      // background-image: url(../../img/section-tour-img-1.jpeg);
       background-position: 0 -17rem;
       background-repeat: no-repeat;
       background-size: 100% auto;
       background-blend-mode: hard-light;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
       &_img-bg1 {
-         background-image: url(../../img/section-tour-img-1.jpeg);
+         background-image: url(../img/section-tour-img-1.jpeg);
       }
       &_img-bg2 {
-         background-image: url(../../img/section-tour-img-2.jpeg);
+         background-image: url(../img/section-tour-img-2.jpeg);
       }
       &_img-bg3 {
-         background-image: url(../../img/section-tour-img-3.jpeg);
+         background-image: url(../img/section-tour-img-3.jpeg);
       }
       @include respond(tab-port) {
          height: 30rem;

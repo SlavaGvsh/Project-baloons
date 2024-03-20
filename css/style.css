@@ -818,6 +818,11 @@ body.checked {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 670px), (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px) {
+  .header {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)), url(../img/header-bg-big.jpeg) center/cover no-repeat;
+  }
+}
 @media (max-width: 1240px) {
   .header {
     height: 70vh;
@@ -914,7 +919,7 @@ body.checked {
   right: 10.5rem;
   top: 10.5rem;
   z-index: 50;
-  transition: 0.3s all ease;
+  transition: 0.7s all ease-out;
 }
 .navigation__nav {
   height: 100vh;
@@ -947,7 +952,6 @@ body.checked {
   text-transform: uppercase;
   background: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 220%;
-  transition: all 0.3s;
 }
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;

@@ -5,6 +5,13 @@
       linear-gradient(90deg, rgba($color-brown-light, 0.8), rgba($color-black, 0.8)),
       url(../img/header-bg.jpeg) center/cover no-repeat;
    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+
+   @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px) {
+      background:
+         linear-gradient(90deg, rgba($color-white, 0.8), rgba($color-black, 0.8)),
+         url(../img/header-bg-big.jpeg) center/cover no-repeat;
+   }
+
    @include respond(tab-land) {
       height: 70vh;
    }

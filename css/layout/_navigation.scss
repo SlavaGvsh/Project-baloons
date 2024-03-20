@@ -27,7 +27,7 @@
       right: 10.5rem;
       top: 10.5rem;
       z-index: 50;
-      transition: 0.3s all ;
+      transition: 0.3s all ease;
    }
 
    &__nav {
@@ -35,11 +35,10 @@
       width: 100%;
       position: fixed;
       top: 0;
-      right: 0;
+      left: 0;
       z-index: 75;
       display: none;
-      transition: 0.3s all ;
-
+      transition: 0.3s all ease;
    }
 
    &__list {
@@ -67,7 +66,7 @@
          text-transform: uppercase;
          background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
          background-size: 220%;
-         transition: all 0.7s;
+         transition: all 0.3s;
       }
       &:hover,
       &:active {
@@ -78,11 +77,8 @@
    }
    &__toggle:checked ~ &__background {
       transform: scale(150);
-      transition: all 0.7s;
+      // transition: 0.3s all ease;
 
-   }
-   &__toggle:checked ~ &__nav {
-      display: block;
    }
    &__icon {
       position: relative;
@@ -91,7 +87,7 @@
       &::before,
       &::after {
          width: 2.5rem;
-         height: .2rem;
+         height: 0.2rem;
          background: $color-black;
          display: inline-block;
       }
@@ -102,11 +98,14 @@
          left: 0;
       }
       &::before {
-         top: -.8rem;
+         top: -0.8rem;
       }
       &::after {
-         top: .8rem;
+         top: 0.8rem;
       }
+   }
+   &__toggle:checked ~ &__nav {
+      display: block;
    }
    &__button:hover &__icon::before {
       top: -1rem;
@@ -124,6 +123,5 @@
    &__toggle:checked + &__button &__icon::after {
       top: 0;
       transform: rotate(-135deg);
-      
    }
 }
